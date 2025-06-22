@@ -14,6 +14,10 @@ return [
     |
     */
 
+    'openai' => [
+        'api_key' => env('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'),
+        ],
+
     'postmark' => [
         'token' => env('POSTMARK_TOKEN'),
     ],
