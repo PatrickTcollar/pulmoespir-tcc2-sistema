@@ -87,7 +87,6 @@ class EvolutionController extends Controller
 
         try {
             $aiResponse = Http::timeout(120)
-                            ->withoutVerifying() // APENAS PARA TESTE LOCAL - REMOVER EM PRODUÇÃO
                             ->post($apiUrl, $payload)->json();
 
             $evolutionReportContent = $aiResponse['candidates'][0]['content']['parts'][0]['text']

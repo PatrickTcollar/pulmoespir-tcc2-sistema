@@ -119,7 +119,7 @@ class ExameLaudoController extends Controller
             // Define um timeout de 60 segundos para a requisição.
             // ->withoutVerifying() é usado para ignorar problemas de certificado SSL LOCALMENTE.
             // ATENÇÃO: ISTO É APENAS PARA TESTES LOCAIS E NÃO DEVE SER USADO EM PRODUÇÃO!
-            $aiResponse = Http::timeout(60)->withoutVerifying()->post($apiUrl, $payload)->json();
+            $aiResponse = Http::timeout(60)->post($apiUrl, $payload)->json();
 
             // 4. Processar a Resposta da IA
             // Tenta extrair o conteúdo do laudo da estrutura de resposta do Gemini.
